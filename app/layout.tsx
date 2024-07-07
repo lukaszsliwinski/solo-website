@@ -21,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="pl">
+      <body className="bg-lime-900 h-[10000px]">
         <Navbar />
-        {children}
+        <main>
+         {children}
+        </main>
         <Footer />
       </body>
     </html>
