@@ -2,7 +2,14 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div className="w-100 h-80 bg-lime-600 landing-bg"></div>
+    <div className="bg-black">
+      <div
+        className="h-screen bg-local bg-fit-h bg-no-repeat bg-left bg-landing"
+        id="landing"
+      >
+
+      </div>
+    </div>
   )
 }
 

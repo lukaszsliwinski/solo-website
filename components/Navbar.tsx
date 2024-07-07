@@ -16,12 +16,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [windowTop]);
 
-
+// przeniesione z Landing <div className="w-100 h-32 bg-gray-800 navbar-bg"></div>
   return (
     <nav
       className={`
-        fixed z-20 flex w-full justify-center text-black font-semibold delay-100 duration-500 ease-in-out
-        ${windowTop ? 'h-16' : 'bg-white h-12 shadow-lg'}
+        fixed top-0 z-20 w-full flex justify-center text-white font-semibold duration-150 ease-in-out
+        ${windowTop ? 'bg-transparent h-16' : 'bg-black/80 backdrop-blur-md h-12'}
       `}
     >
       <ul className="flex space-x-10">
@@ -34,7 +34,7 @@ const Navbar = () => {
         ].map(([title, href]) => (
           <li
             key={href}
-            className={`first-of-type:hidden delay-100 duration-500 ease-in-out
+            className={`first-of-type:hidden duration-150 ease-in-out
               ${windowTop ? 'leading-[64px]' : 'leading-[48px]'}
             `}
           >

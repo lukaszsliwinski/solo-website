@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "landing": "url('../public/landing.jpg')",
       },
+      backgroundSize: {
+        'fit-h': 'auto 100%'
+      }
     },
   },
   plugins: [],
