@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.landing-bg {
+  clip-path: polygon(0 0,100% 0,100% 70%,0 100%);
+}

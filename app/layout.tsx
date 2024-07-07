@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className="bg-lime-900 h-[10000px]">
+      <body className="h-[10000px]">
         <Navbar />
         <main>
          {children}

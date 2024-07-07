@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav
       className={`
         fixed z-20 flex w-full justify-center text-black font-semibold delay-100 duration-500 ease-in-out
-        ${windowTop ? 'h-16' : 'bg-white h-12'}
+        ${windowTop ? 'h-16' : 'bg-white h-12 shadow-lg'}
       `}
     >
       <ul className="flex space-x-10">
