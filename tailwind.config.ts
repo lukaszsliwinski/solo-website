@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "landing": "url('../public/landing.jpg')",
+        "landing": "url('../public/landing.png')",
       },
       backgroundSize: {
         'fit-h': 'auto 100%'
