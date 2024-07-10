@@ -4,12 +4,11 @@ import { ReactNode } from "react"
 interface Props {
   label: string,
   href: string,
-  color: string,
   bg: string,
   icon: ReactNode
 }
 
-const Tile = ({ label, href, color, bg, icon }: Props) => {
+const Tile = ({ label, href, bg, icon }: Props) => {
   return (
     <Link
       href={href}
