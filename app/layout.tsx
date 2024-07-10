@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 /**
  * TODO: select a font
  * https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
+ * 
+ * Oswald, sans-serif - headers
+ * Open sans, sans-serif - content
+ * 
  */
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className="h-[10000px]">
+      <body className="h-[10000px] tracking-wider">
         <Navbar />
         <main>
          {children}

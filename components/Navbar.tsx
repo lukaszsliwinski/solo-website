@@ -27,14 +27,13 @@ const Navbar = () => {
       <ul className="flex space-x-10">
         {[
           ['', '#landing'],
-          ['item1', '#item1'],
-          ['item2', '#item2'],
-          ['item3', '#item3'],
-          ['item4', '#item4']
+          ['o mnie', '#about'],
+          ['muzyka', '#music'],
+          ['linki', '#links']
         ].map(([title, href]) => (
           <li
             key={href}
-            className={`first-of-type:hidden duration-150 ease-in-out
+            className={`first-of-type:hidden duration-150 ease-in-out hover:text-red-600
               ${windowTop ? 'leading-[64px]' : 'leading-[48px]'}
             `}
           >
