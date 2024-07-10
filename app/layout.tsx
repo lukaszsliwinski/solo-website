@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-/**
- * TODO: select a font
- * https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
- * 
- * Oswald, sans-serif - headers
- * Open sans, sans-serif - content
- * 
- */
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Z górą w tle",
@@ -28,7 +22,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className="h-[10000px] tracking-wider">
         <Navbar />
-        <main>
+        <main className={openSans.className}>
          {children}
         </main>
         <Footer />
