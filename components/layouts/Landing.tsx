@@ -1,4 +1,6 @@
-import Header from "./Header"
+import Header from "../shared/Header"
+import Paragraph from "../shared/Paragraph"
+import Button from "../shared/Button"
 
 const Landing = () => {
   return (
@@ -9,10 +11,8 @@ const Landing = () => {
       >
         <div className="flex flex-col items-end w-2/5 min-w-96 min-h-[28rem] p-10 bg-white/30 text-white">
           <Header text={'Z GÓRĄ W TLE'} />
-          <p className="font-semibold text-2xl my-6 text-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          </p>
-          <button className="w-28 h-12 mt-auto bg-red-600 text-white hover:bg-red-700 text-lg">WIĘCEJ</button>
+          <Paragraph text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'} />
+          <Button label={'WIĘCEJ'} />
         </div>
       </div>
     </div>
