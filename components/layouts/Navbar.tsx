@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        fixed top-0 z-20 w-full flex justify-center text-white font-semibold duration-150 ease-in-out
-        ${windowTop ? 'bg-transparent h-16' : 'bg-black/80 backdrop-blur-md h-12'}
+        fixed top-0 z-20 w-full flex justify-center text-neutral-100 font-semibold duration-150 ease-in-out
+        ${windowTop ? 'bg-transparent h-16' : 'bg-slate-950/70 backdrop-blur-md h-12'}
       `}
     >
       <ul className="flex space-x-10">
