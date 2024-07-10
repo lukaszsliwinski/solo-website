@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className="h-[10000px] tracking-wider">
+      <body className="tracking-wider">
         <Navbar />
         <main className={openSans.className}>
          {children}
