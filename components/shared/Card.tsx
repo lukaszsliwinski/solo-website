@@ -6,9 +6,9 @@ const oswald = Oswald({
 })
 
 interface Props {
-  header: string,
+  header?: string,
   text: string,
-  align: 'left' | 'right',
+  align: 'justify' | 'right',
   bgColor: string,
   textColor: string,
   children?: ReactNode
@@ -31,7 +31,7 @@ const Card = ({
         `}
     >
       <h2 className={`${oswald.className} tracking-wider font-bold text-4xl`}>{header}</h2>
-      <p className={`font-semibold text-lg my-6 ${align === 'right' ? 'text-right' : ''}`}>{text}</p>
+      <p className={`font-semibold text-lg my-6 ${align === 'right' ? 'text-right' : 'text-justify'}`}>{text}</p>
       {children}
     </div>
   )

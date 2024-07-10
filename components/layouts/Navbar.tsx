@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        fixed top-0 z-20 w-full flex justify-center text-neutral-100 font-semibold duration-150 ease-in-out
-        ${windowTop ? 'bg-transparent h-16' : 'bg-slate-950/70 backdrop-blur-md h-12'}
+        fixed top-0 z-20 w-full flex justify-center text-neutral-300 font-semibold duration-150 ease-in-out
+        ${windowTop ? 'bg-transparent h-16' : 'bg-gray-950/70 backdrop-blur-md h-12'}
       `}
     >
       <ul className="flex space-x-10">
@@ -33,7 +33,7 @@ const Navbar = () => {
         ].map(([title, href]) => (
           <li
             key={href}
-            className={`first-of-type:hidden duration-150 ease-in-out hover:text-red-600
+            className={`first-of-type:hidden duration-150 ease-in-out hover:text-orange-700
               ${windowTop ? 'leading-[64px]' : 'leading-[48px]'}
             `}
           >
