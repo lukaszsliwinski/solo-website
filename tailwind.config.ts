@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "landing": "url('../public/landing.png')",
+        "mountains": "url('../public/mountains.jpg')"
       },
       backgroundSize: {
         'fit-h': 'auto 100%'
