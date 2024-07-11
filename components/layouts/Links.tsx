@@ -21,7 +21,7 @@ const Links = () => {
         label={obj.label}
         href={obj.href}
         bg={obj.bg}
-        icon={<FontAwesomeIcon icon={obj.icon} />} />
+        icon={<FontAwesomeIcon icon={obj.icon} size="4x"/>} />
     )
   })
 

@@ -16,8 +16,8 @@ const Tile = ({ label, href, bg, icon }: Props) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <div className="w-16 h-16">{icon}</div>
-      <div className="mt-4">{label}</div>
+      {icon}
+      <label className="mt-4">{label}</label>
     </Link>
   )
 }
