@@ -16,11 +16,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [windowTop]);
 
-// przeniesione z Landing <div className="w-100 h-32 bg-gray-800 navbar-bg"></div>
   return (
     <nav
       className={`
-        fixed top-0 z-20 w-full flex justify-center text-neutral-300 font-semibold duration-150 ease-in-out
+        fixed top-0 z-20 w-full flex justify-center text-xl duration-150 ease-in-out
         ${windowTop ? 'bg-transparent h-16' : 'bg-gray-950/70 backdrop-blur-md h-12'}
       `}
     >

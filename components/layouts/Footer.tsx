@@ -11,9 +11,9 @@ const Footer = () => {
 
   [
     { label: 'SOUNDCLOUD', href: 'https://soundcloud.com', icon: faSoundcloud, bg: 'bg-orange-600'},
-    { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, bg: 'bg-[#1da0c3]'},
-    { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, bg: 'bg-red-600'},
-    { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, bg: 'bg-[#833ab4]'}
+    { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, bg: 'bg-cyan-600'},
+    { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, bg: 'bg-purple-800'},
+    { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, bg: 'bg-red-600'}
   ].forEach(obj => {
     tiles.push(
       <Tile
