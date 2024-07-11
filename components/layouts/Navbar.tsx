@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [windowTop, setWindowTop] = useState<boolean>(true);
+  const [windowTop, setWindowTop] = useState<boolean>(window.scrollY <= 20);
 
   // handle window top
   useEffect(() => {
