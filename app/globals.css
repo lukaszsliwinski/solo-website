@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* scrollbar */
+html {
+  scrollbar-color: rgb(3 7 18) rgb(212 212 212);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(3 7 18);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(3 7 18);
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(212 212 212);
+}
+
+
+/* scrollspy */
+.active-scroll-spy {
+  color: rgb(194 65 12); /* orange-700 */
+}

@@ -1,7 +1,7 @@
 const Music = () => {
   return (
-    <div className="bg-mountains top-0 min-h-screen bg-cover bg-fixed bg-center" id="music">
-      <section className="grid grid-cols-2 h-screen bg-gray-950/80">
+    <section className="bg-mountains top-0 min-h-screen bg-cover bg-fixed bg-center" id="music">
+      <div className="grid grid-cols-2 h-screen bg-gray-950/80">
         <iframe
           className="w-[40rem] h-[40rem] m-auto"
           allow="autoplay"
@@ -10,8 +10,8 @@ const Music = () => {
         <p className="w-[40rem] text-lg m-auto text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 

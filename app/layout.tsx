@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
 
 const openSans = Open_Sans({
   subsets: ["latin"]
@@ -19,13 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
+    <html lang="pl" className="scroll-smooth">
       <body className="tracking-wider font-semibold text-neutral-300">
         <Navbar />
         <main className={openSans.className}>
          {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

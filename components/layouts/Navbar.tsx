@@ -1,10 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 
-/**
- * TODO: https://www.npmjs.com/package/react-ui-scrollspy
- */
-
 const Navbar = () => {
   const [windowTop, setWindowTop] = useState<boolean>(true);
 
@@ -25,13 +21,14 @@ const Navbar = () => {
     >
       <ul className="flex space-x-10">
         {[
-          ['', '#landing'],
-          ['o mnie', '#about'],
-          ['muzyka', '#music'],
-          ['linki', '#links']
-        ].map(([title, href]) => (
+          ['', 'home', '#home'],
+          ['o mnie', 'about', '#about'],
+          ['muzyka', 'music', '#music'],
+          ['linki', 'links', '#links']
+        ].map(([title, id, href]) => (
           <li
-            key={href}
+            data-to-scrollspy-id={id}
+            key={id}
             className={`first-of-type:hidden duration-150 ease-in-out hover:text-orange-700
               ${windowTop ? 'leading-[64px]' : 'leading-[48px]'}
             `}
