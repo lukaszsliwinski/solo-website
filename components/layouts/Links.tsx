@@ -27,7 +27,7 @@ const Links = () => {
   })
 
   return (
-    <section className="relative flex h-[45vh] bg-neutral-300" id="links">
+    <section className="relative flex h-[45vh] bg-neutral-400" id="links">
       <div className="max-w-[64rem] grid grid-cols-3 gap-16 pb-20 m-auto">
         {picks}
       </div>

@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       
       
-      <div className="flex flex-col justify-center items-center h-screen bg-black/70">
+      <div className="flex flex-col justify-center items-center h-screen bg-black/60">
 
         
         <h1 className="font-light text-neutral-300 my-24 select-none">

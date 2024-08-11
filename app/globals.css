@@ -9,7 +9,7 @@
 
 /* scrollbar */
 html {
-  scrollbar-color: rgb(0 0 0) rgb(212 212 212);
+  scrollbar-color: rgb(0 0 0) rgb(163 163 163);
   scrollbar-width: thin;
 }
 
@@ -26,7 +26,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 html::-webkit-scrollbar-track {
-  background: rgb(212 212 212);
+  background: rgb(163 163 163);
 }
 
 

@@ -5,7 +5,7 @@ const Music = () => {
     <section className="relative bg-mountains top-0 min-h-screen bg-cover bg-fixed bg-center" id="music">
       <div className="absolute top-0 w-full h-28 bg-black top-cover" ></div>
 
-      <div className="grid grid-cols-2 h-screen bg-black/80">
+      <div className="grid grid-cols-2 h-screen bg-black/70">
         <div className="w-[40rem] m-auto">
           <h2 className="text-4xl">Z GÓRĄ W TLE</h2>
           <Paragraph text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
@@ -17,7 +17,7 @@ const Music = () => {
         ></iframe>
       </div>
 
-      <div className="absolute bottom-0 w-full h-28 bg-neutral-300 bottom-cover" ></div>
+      <div className="absolute bottom-0 w-full h-28 bg-neutral-400 bottom-cover" ></div>
     </section>
   )
 }
