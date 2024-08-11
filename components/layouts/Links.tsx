@@ -12,7 +12,7 @@ const Links = () => {
   [
     { label: 'SOUNDCLOUD', href: 'https://soundcloud.com', icon: faSoundcloud, hover: 'hover:text-orange-600'},
     { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, hover: 'hover:text-cyan-600'},
-    { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800'},
+    // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800'},
     { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, hover: 'hover:text-red-600'}
   ].forEach((obj, idx) => {
     picks.push(
@@ -26,8 +26,8 @@ const Links = () => {
   })
 
   return (
-    <section className="relative flex h-screen bg-neutral-300" id="links">
-      <div className="max-w-[64rem] grid grid-cols-4 gap-16 m-auto">
+    <section className="relative flex h-[45vh] bg-neutral-300" id="links">
+      <div className="max-w-[64rem] grid grid-cols-3 gap-16 pb-20 m-auto">
         {picks}
       </div>
       <div className="absolute bottom-6 flex justify-center w-full">
