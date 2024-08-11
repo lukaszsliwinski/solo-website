@@ -5,13 +5,11 @@ interface Props {
   label: string,
   href: string,
   hover: string,
+  active: string,
   icon: ReactNode
 }
 
-
-// TODO: active state
-
-const Pick = ({ label, href, hover, icon }: Props) => {
+const Pick = ({ label, href, hover, active, icon }: Props) => {
   return (
     <Link
       href={href}
@@ -19,8 +17,8 @@ const Pick = ({ label, href, hover, icon }: Props) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <label className="text-neutral-200 mb-1 text-sm">{label}</label>
-      <div className="mb-6">{icon}</div>
+      <label className="text-neutral-200 mb-1 text-xs">{label}</label>
+      <div className="mb-4">{icon}</div>
     </Link>
   )
 }

@@ -1,4 +1,3 @@
-import Header from "../shared/Header"
 import Paragraph from "../shared/Paragraph"
 
 const Music = () => {
@@ -8,7 +7,7 @@ const Music = () => {
 
       <div className="grid grid-cols-2 h-screen bg-black/80">
         <div className="w-[40rem] m-auto">
-          <Header text={'Z GÓRĄ W TLE'} />
+          <h2 className="text-4xl">Z GÓRĄ W TLE</h2>
           <Paragraph text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
         </div>
         <iframe

@@ -15,8 +15,8 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center h-screen bg-black/70">
 
         
-        <h1 className="font-light text-neutral-300 my-24">
-          <span className="block text-4xl tracking-[1.02rem] mb-4">ŁUKASZ ŚLIWIŃSKI</span>
+        <h1 className="font-light text-neutral-300 my-24 select-none">
+          <span className="block text-4xl tracking-[1.02rem] mb-4 scale-y-75">ŁUKASZ ŚLIWIŃSKI</span>
           <span className="block text-7xl tracking-widest">Z GÓRĄ W TLE</span>
         </h1>
         <div className="grid grid-cols-3 gap-8">
@@ -26,8 +26,8 @@ const Home = () => {
         </div>
       
       </div>
-      <div className="absolute bottom-0 w-1/2 h-1/5 bg-black left-cover" ></div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/5 bg-black right-cover" ></div>
+      <div className="absolute bottom-0 w-7/12 h-1/6 bg-black left-cover" ></div>
+      <div className="absolute bottom-0 right-0 w-7/12 h-1/6 bg-black right-cover" ></div>
     </section>
   )
 }

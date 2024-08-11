@@ -10,10 +10,10 @@ const Links = () => {
   const picks: ReactNode[] = [];
 
   [
-    { label: 'SOUNDCLOUD', href: 'https://soundcloud.com', icon: faSoundcloud, hover: 'hover:text-orange-600'},
-    { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, hover: 'hover:text-cyan-600'},
-    // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800'},
-    { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, hover: 'hover:text-red-600'}
+    { label: 'SOUNDCLOUD', href: 'https://soundcloud.com', icon: faSoundcloud, hover: 'hover:text-orange-600', active: 'active:text-orange-600'},
+    { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, hover: 'hover:text-cyan-600', active: 'active:text-cyan-600'},
+    // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800', active: 'active:text-purple-800'},
+    { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, hover: 'hover:text-red-600', active: 'active:text-red-600'}
   ].forEach((obj, idx) => {
     picks.push(
       <Pick
@@ -21,6 +21,7 @@ const Links = () => {
         label={obj.label}
         href={obj.href}
         hover={obj.hover}
+        active={obj.active}
         icon={<FontAwesomeIcon icon={obj.icon} size="3x"/>} />
     )
   })
@@ -30,7 +31,7 @@ const Links = () => {
       <div className="max-w-[64rem] grid grid-cols-3 gap-16 pb-20 m-auto">
         {picks}
       </div>
-      <div className="absolute bottom-6 flex justify-center w-full">
+      <div className="absolute bottom-6 flex justify-center w-full select-none">
         <p className="text-gray-950">&copy; {years} ŁUKASZ ŚLIWIŃSKI</p>
       </div>
     </section>
