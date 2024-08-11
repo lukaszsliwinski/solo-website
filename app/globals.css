@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --slope: 60%;
+}
+
 /* scrollbar */
 html {
   scrollbar-color: rgb(3 7 18) rgb(212 212 212);
@@ -25,7 +30,18 @@ html::-webkit-scrollbar-track {
 }
 
 
-/* scrollspy */
-.active-scroll-spy {
-  color: rgb(194 65 12); /* orange-700 */
+.left-cover {
+  clip-path: polygon(0 0,100% var(--slope),100% 100%,0 100%);
+}
+
+.right-cover {
+  clip-path: polygon(0 var(--slope),100% 0,100% 100%,0 100%);
+}
+
+.top-cover {
+  clip-path: polygon(0 0,100% 0,0 100%,0 100%);
+}
+
+.bottom-cover {
+  clip-path: polygon(0 0,0 0,100% 100%,0 100%);
 }
