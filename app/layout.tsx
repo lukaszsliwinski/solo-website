@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className="tracking-[.2rem] font-normal bg-black text-neutral-300">
         <main className={openSans.className}>
          {children}
