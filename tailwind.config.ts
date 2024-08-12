@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   content: [
@@ -7,6 +8,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      '2xs': '360px',
+      xs: '480px',
+      ...defaultTheme.screens
+    },
     extend: {
       backgroundImage: {
         "landing": "url('../public/landing.png')",

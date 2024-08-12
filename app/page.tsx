@@ -8,9 +8,9 @@ export default function Page() {
   return (
     <>
       <Home />
-      <About />
-      <Music />
-      <Links />
+      {/* <About /> */}
+      {/* <Music /> */}
+      {/* <Links /> */}
     </>
   );
 }
