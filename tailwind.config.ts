@@ -21,6 +21,15 @@ const config: Config = {
       },
       backgroundSize: {
         'fit-h': 'auto 100%'
+      },
+      width: {
+        '160': '40rem'
+      },
+      maxWidth: {
+        '160': '40rem'
+      },
+      height: {
+        '160': '40rem'
       }
     },
   },

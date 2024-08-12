@@ -17,8 +17,8 @@ const Home = ({ verticalScreen, isMobile }: Props) => {
       
       <div className="flex flex-col justify-center items-center h-screen bg-black/60">
         <h1 className={`font-light text-neutral-300 ${isMobile && !verticalScreen ? 'my-8' : 'my-24'} select-none`}>
-          <span className="block text-xl xs:text-2xl sm:text-4xl tracking-[.445rem] xs:tracking-[.69rem] sm:tracking-[1.02rem] mb-4 scale-y-75">ŁUKASZ ŚLIWIŃSKI</span>
-          <span className="block text-4xl xs:text-5xl sm:text-7xl tracking-widest">Z GÓRĄ W TLE</span>
+          <span className="block text-lg 2xs:text-xl xs:text-2xl sm:text-4xl tracking-[.325rem] 2xs:tracking-[.445rem] xs:tracking-[.69rem] sm:tracking-[1.02rem] 2xs:mb-2 xs:mb-4 scale-y-75">ŁUKASZ ŚLIWIŃSKI</span>
+          <span className="block text-3xl 2xs:text-4xl xs:text-5xl sm:text-7xl tracking-widest">Z GÓRĄ W TLE</span>
         </h1>
         <div className="grid xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8">
           <Button label="O MNIE" href="#about" />
