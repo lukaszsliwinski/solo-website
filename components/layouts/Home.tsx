@@ -1,20 +1,13 @@
-import { useState, useEffect } from "react";
-import useWindowDimensions from "../hooks/useWindowDimensions";
 import Image from "next/image";
 import logo from "../../public/logo.svg";
 import Button from "../shared/Button";
 
-const Home = () => {
-  const { screenHeight, screenWidth } = useWindowDimensions();
+interface Props {
+  verticalScreen: boolean,
+  isMobile: boolean
+}
 
-  const [verticalScreen, setVerticalScreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(screenWidth < 950);
-
-  useEffect(() => {
-    setVerticalScreen(screenHeight > screenWidth);
-    setIsMobile(screenWidth < 950)
-  }, [screenHeight, screenWidth]);
-
+const Home = ({ verticalScreen, isMobile }: Props) => {
   return (
     <section className="relative bg-cover bg-center bg-no-repeat bg-landing" id="home">
       

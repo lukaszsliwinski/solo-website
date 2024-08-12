@@ -16,7 +16,6 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "landing": "url('../public/landing.png')",
-        "profile": "url('../public/profile.png')",
         "mountains": "url('../public/mountains.jpg')",
         "pick": "url('../public/pick.svg')"
       },

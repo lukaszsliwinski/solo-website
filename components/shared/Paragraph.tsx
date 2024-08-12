@@ -1,6 +1,9 @@
-const Paragraph = ({ text }: { text: string }) => {
+const Paragraph = ({ header, text }: { header: string, text: string }) => {
   return (
-    <p className="text-lg mt-6 text-justify">{text}</p>
+    <div className="m-auto w-4/5 max-w-[40rem]">
+      <h2 className="text-xl xs:text-3xl xl:text-4xl">{header}</h2>
+      <p className="text-sm xs:text-base xl:text-lg mt-6 text-justify">{text}</p>
+    </div>
   )
 }
 
