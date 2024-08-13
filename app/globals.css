@@ -2,32 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --slope: 60%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* scrollbar */
+html {
+  scrollbar-color: rgb(0 0 0) rgb(163 163 163);
+  scrollbar-width: thin;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html::-webkit-scrollbar {
+  width: 8px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html::-webkit-scrollbar-thumb {
+  background: rgb(0 0 0);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(0 0 0);
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(163 163 163);
+}
+
+
+.left-cover {
+  clip-path: polygon(0 0,100% var(--slope),100% 100%,0 100%);
+}
+
+.right-cover {
+  clip-path: polygon(0 var(--slope),100% 0,100% 100%,0 100%);
+}
+
+.top-cover {
+  clip-path: polygon(0 0,100% 0,0 100%,0 100%);
+}
+
+.bottom-cover {
+  clip-path: polygon(0 0,0 0,100% 100%,0 100%);
 }
