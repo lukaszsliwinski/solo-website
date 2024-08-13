@@ -1,4 +1,4 @@
-import { IButton } from "./types"
+import { IButton } from './types';
 
 const Button = ({ label, href }: IButton) => {
   return (
@@ -9,7 +9,7 @@ const Button = ({ label, href }: IButton) => {
     >
       {label}
     </a>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

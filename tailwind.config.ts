@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     screens: {
@@ -15,9 +15,9 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "landing": "url('../public/landing.png')",
-        "mountains": "url('../public/mountains.jpg')",
-        "pick": "url('../public/pick.svg')"
+        landing: "url('../public/landing.png')",
+        mountains: "url('../public/mountains.jpg')",
+        pick: "url('../public/pick.svg')"
       },
       backgroundSize: {
         'fit-h': 'auto 100%'
@@ -39,11 +39,10 @@ const config: Config = {
         'main-text': '#e5e5e5',
         'dark-text': '#404040',
         'dark-bg': '#09090b',
-        'light-bg': '#e5e5e5',
-        
+        'light-bg': '#e5e5e5'
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 };
 export default config;

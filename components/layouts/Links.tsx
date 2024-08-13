@@ -1,20 +1,43 @@
-import { ISection } from "../shared/types";
-import { ReactNode } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSoundcloud, faYoutube, faBandcamp, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { ISection } from '../shared/types';
+import { ReactNode } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faSoundcloud,
+  faYoutube,
+  faBandcamp,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
 import moment from 'moment';
-import Pick from "../shared/Pick"
+import Pick from '../shared/Pick';
 
 const Links = ({ verticalScreen, isMobile }: ISection) => {
-  const years = moment().year().toString() === '2024' ? '2024' : `2024-${moment().year()}`
+  const years = moment().year().toString() === '2024' ? '2024' : `2024-${moment().year()}`;
 
   const picks: ReactNode[] = [];
 
   [
-    { label: 'SOUNDCLOUD', href: 'https://soundcloud.com', icon: faSoundcloud, hover: 'hover:text-orange-600', active: 'active:text-orange-600'},
-    { label: 'BANDCAMP', href: 'https://bandcamp.com', icon: faBandcamp, hover: 'hover:text-cyan-600', active: 'active:text-cyan-600'},
+    {
+      label: 'SOUNDCLOUD',
+      href: 'https://soundcloud.com',
+      icon: faSoundcloud,
+      hover: 'hover:text-orange-600',
+      active: 'active:text-orange-600'
+    },
+    {
+      label: 'BANDCAMP',
+      href: 'https://bandcamp.com',
+      icon: faBandcamp,
+      hover: 'hover:text-cyan-600',
+      active: 'active:text-cyan-600'
+    },
     // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800', active: 'active:text-purple-800'},
-    { label: 'YOUTUBE', href: 'https://youtube.com', icon: faYoutube, hover: 'hover:text-red-600', active: 'active:text-red-600'}
+    {
+      label: 'YOUTUBE',
+      href: 'https://youtube.com',
+      icon: faYoutube,
+      hover: 'hover:text-red-600',
+      active: 'active:text-red-600'
+    }
   ].forEach((obj, idx) => {
     picks.push(
       <Pick
@@ -23,20 +46,22 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
         href={obj.href}
         hover={obj.hover}
         active={obj.active}
-        icon={<FontAwesomeIcon icon={obj.icon} size="3x"/>} />
-    )
-  })
+        icon={<FontAwesomeIcon icon={obj.icon} size="3x" />}
+      />
+    );
+  });
 
   return (
-    <section className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-light-bg`} id="links">
-      <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">
-        {picks}
-      </div>
+    <section
+      className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-light-bg`}
+      id="links"
+    >
+      <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">{picks}</div>
       <div className="absolute bottom-6 flex justify-center w-full select-none">
         <p className="text-gray-950">&copy; {years} ŁUKASZ ŚLIWIŃSKI</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Links
+export default Links;

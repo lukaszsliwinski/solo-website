@@ -1,5 +1,5 @@
-import { IPick } from "./types"
-import Link from "next/link"
+import { IPick } from './types';
+import Link from 'next/link';
 
 const Pick = ({ label, href, hover, active, icon }: IPick) => {
   return (
@@ -9,10 +9,12 @@ const Pick = ({ label, href, hover, active, icon }: IPick) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <label className="hidden xs:block text-main-text lg:mb-1 text-[.45rem] lg:text-xs">{label}</label>
+      <label className="hidden xs:block text-main-text lg:mb-1 text-[.45rem] lg:text-xs">
+        {label}
+      </label>
       <div className="mb-4 xs:max-lg:mb-2 scale-[.6] xs:scale-75 lg:scale-100">{icon}</div>
     </Link>
-  )
-}
+  );
+};
 
-export default Pick
+export default Pick;

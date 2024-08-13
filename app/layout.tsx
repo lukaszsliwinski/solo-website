@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 import Favicon from './favicon.ico';
-import { Open_Sans } from "next/font/google";
-import "./globals.css";
+import { Open_Sans } from 'next/font/google';
+import './globals.css';
 
 const openSans = Open_Sans({
-  subsets: ["latin"]
-})
+  subsets: ['latin']
+});
 
 export const metadata: Metadata = {
-  title: "Z górą w tle",
-  description: "",
-  icons: [{ rel: 'icon', url: Favicon.src }],
+  title: 'Z górą w tle',
+  description: '',
+  icons: [{ rel: 'icon', url: Favicon.src }]
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -24,9 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head> */}
       <body className="tracking-[.2rem] font-normal bg-dark-bg text-main-text">
-        <main className={openSans.className}>
-         {children}
-        </main>
+        <main className={openSans.className}>{children}</main>
       </body>
     </html>
   );
