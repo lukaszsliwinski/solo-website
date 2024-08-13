@@ -3,9 +3,9 @@ import Paragraph from "../shared/Paragraph"
 const Music = () => {
   return (
     <section className="relative bg-mountains top-0 min-h-screen bg-cover bg-fixed bg-center" id="music">
-      <div className="absolute top-0 w-full h-28 bg-black top-cover" ></div>
+      <div className="absolute top-0 w-full h-28 bg-dark-bg top-cover" ></div>
 
-      <div className="grid lg:grid-cols-2 min-h-screen bg-black/70 py-40 lg:py-0">
+      <div className="grid lg:grid-cols-2 min-h-screen bg-dark-bg/50 py-40 lg:py-0">
 
         <Paragraph
           header={'Z GÓRĄ W TLE'}
@@ -21,7 +21,7 @@ const Music = () => {
 
       </div>
 
-      <div className="absolute bottom-0 w-full h-28 bg-neutral-400 bottom-cover" ></div>
+      <div className="absolute bottom-0 w-full h-28 bg-light-bg bottom-cover" ></div>
     </section>
   )
 }

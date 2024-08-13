@@ -34,6 +34,13 @@ const config: Config = {
       },
       minHeight: {
         'screen-mobile': 'calc(var(--vh, 1vh) * 100)'
+      },
+      colors: {
+        'main-text': '#e5e5e5',
+        'dark-text': '#404040',
+        'dark-bg': '#09090b',
+        'light-bg': '#e5e5e5',
+        
       }
     },
   },

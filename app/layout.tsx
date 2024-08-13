@@ -23,7 +23,7 @@ export default function RootLayout({
       {/* <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head> */}
-      <body className="tracking-[.2rem] font-normal bg-black text-neutral-300">
+      <body className="tracking-[.2rem] font-normal bg-dark-bg text-main-text">
         <main className={openSans.className}>
          {children}
         </main>

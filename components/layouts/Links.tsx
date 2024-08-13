@@ -28,7 +28,7 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
   })
 
   return (
-    <section className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-neutral-400`} id="links">
+    <section className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-light-bg`} id="links">
       <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">
         {picks}
       </div>
