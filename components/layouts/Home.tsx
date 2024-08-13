@@ -1,13 +1,9 @@
+import { IHome } from "../shared/types";
 import Image from "next/image";
 import logo from "../../public/logo.svg";
 import Button from "../shared/Button";
 
-interface Props {
-  verticalScreen: boolean,
-  isMobile: boolean
-}
-
-const Home = ({ verticalScreen, isMobile }: Props) => {
+const Home = ({ verticalScreen, isMobile }: IHome) => {
   return (
     <section className="relative bg-cover bg-center bg-no-repeat bg-landing" id="home">
       

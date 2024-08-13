@@ -1,9 +1,6 @@
-interface Props {
-  label: string,
-  href: string
-}
+import { IButton } from "./types"
 
-const Button = ({ label, href }: Props) => {
+const Button = ({ label, href }: IButton) => {
   return (
     <a
       type="button"

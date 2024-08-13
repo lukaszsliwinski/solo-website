@@ -28,7 +28,7 @@ const Links = () => {
 
   return (
     <section className="relative flex h-[45vh] bg-neutral-400" id="links">
-      <div className="grid grid-cols-3 gap-2 xs:gap-6 lg:gap-16 pb-20 m-auto">
+      <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">
         {picks}
       </div>
       <div className="absolute bottom-6 flex justify-center w-full select-none">
