@@ -5,6 +5,7 @@
 
 :root {
   --slope: 60%;
+  --slope-mobile: 30%;
 }
 
 /* scrollbar */
@@ -44,4 +45,14 @@ html::-webkit-scrollbar-track {
 
 .bottom-cover {
   clip-path: polygon(0 0,0 0,100% 100%,0 100%);
+}
+
+@media screen and (max-width: 1023px) {
+  .left-cover {
+    clip-path: polygon(0 0,100% var(--slope-mobile),100% 100%,0 100%);
+  }
+  
+  .right-cover {
+    clip-path: polygon(0 var(--slope-mobile),100% 0,100% 100%,0 100%);
+  }
 }

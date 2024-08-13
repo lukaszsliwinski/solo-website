@@ -22,7 +22,7 @@ export default function Page() {
       <Home verticalScreen={verticalScreen} isMobile={isMobile} />
       <About />
       <Music />
-      <Links />
+      <Links verticalScreen={verticalScreen} isMobile={isMobile} />
     </>
   );
 }

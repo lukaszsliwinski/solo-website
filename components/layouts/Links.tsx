@@ -1,10 +1,11 @@
+import { ISection } from "../shared/types";
 import { ReactNode } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSoundcloud, faYoutube, faBandcamp, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import moment from 'moment';
 import Pick from "../shared/Pick"
 
-const Links = () => {
+const Links = ({ verticalScreen, isMobile }: ISection) => {
   const years = moment().year().toString() === '2024' ? '2024' : `2024-${moment().year()}`
 
   const picks: ReactNode[] = [];
@@ -27,7 +28,7 @@ const Links = () => {
   })
 
   return (
-    <section className="relative flex h-[45vh] bg-neutral-400" id="links">
+    <section className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-neutral-400`} id="links">
       <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">
         {picks}
       </div>

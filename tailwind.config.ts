@@ -29,7 +29,11 @@ const config: Config = {
         '160': '40rem'
       },
       height: {
-        '160': '40rem'
+        '160': '40rem',
+        'screen-mobile': 'calc(var(--vh, 1vh) * 100)'
+      },
+      minHeight: {
+        'screen-mobile': 'calc(var(--vh, 1vh) * 100)'
       }
     },
   },
