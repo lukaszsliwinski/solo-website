@@ -10,11 +10,11 @@ export default function Page() {
   const { screenHeight, screenWidth } = useWindowDimensions();
 
   const [verticalScreen, setVerticalScreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(screenWidth < 1024);
+  const [isMobile, setIsMobile] = useState(screenWidth ? screenWidth < 1024 : false);
 
   useEffect(() => {
-    setVerticalScreen(screenHeight > screenWidth);
-    setIsMobile(screenWidth < 1024)
+    setVerticalScreen(screenHeight && screenWidth ? screenHeight > screenWidth : true);
+    setIsMobile(screenWidth ? screenWidth < 1024 : false)
   }, [screenHeight, screenWidth]);
 
   return (
