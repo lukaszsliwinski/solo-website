@@ -58,7 +58,7 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
     >
       <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">{picks}</div>
       <div className="absolute bottom-6 flex justify-center w-full select-none">
-        <p className="text-gray-950">&copy; {years} ŁUKASZ ŚLIWIŃSKI</p>
+        <p className="text-gray-950 text-sm">&copy; {years} ŁUKASZ ŚLIWIŃSKI</p>
       </div>
     </section>
   );
