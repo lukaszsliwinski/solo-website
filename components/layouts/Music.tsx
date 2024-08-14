@@ -8,7 +8,7 @@ const Music = () => {
     >
       <div className="absolute top-0 w-full h-28 bg-dark-bg top-cover"></div>
 
-      <div className="grid lg:grid-cols-2 min-h-screen bg-dark-bg/50 py-40 lg:py-0">
+      <div className="grid lg:grid-cols-2 min-h-screen bg-dark-bg/40 py-40 lg:py-0">
         <Paragraph
           header={'Z GÓRĄ W TLE'}
           text={

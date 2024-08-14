@@ -14,7 +14,7 @@ const Home = ({ verticalScreen, isMobile }: ISection) => {
         />
       </div>
 
-      <div className="flex flex-col justify-center items-center h-screen-mobile bg-dark-bg/50">
+      <div className="flex flex-col justify-center items-center h-screen-mobile bg-dark-bg/40">
         <h1 className={`font-light ${isMobile && !verticalScreen ? 'mb-8' : 'mb-16'} select-none`}>
           <span className="block text-lg 2xs:text-xl xs:text-2xl sm:text-4xl tracking-[.325rem] 2xs:tracking-[.445rem] xs:tracking-[.69rem] sm:tracking-[1.02rem] 2xs:mb-2 xs:mb-4 scale-y-75">
             ŁUKASZ ŚLIWIŃSKI
