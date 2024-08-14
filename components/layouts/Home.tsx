@@ -15,7 +15,7 @@ const Home = ({ verticalScreen, isMobile }: ISection) => {
       </div>
 
       <div className="flex flex-col justify-center items-center h-screen-mobile bg-dark-bg/40">
-        <h1 className={`font-light ${isMobile && !verticalScreen ? 'mb-8' : 'mb-16'} select-none`}>
+        <h1 className={`pl-3 font-light ${isMobile && !verticalScreen ? 'mb-8' : 'mb-16'} select-none`}>
           <span className="block text-lg 2xs:text-xl xs:text-2xl sm:text-4xl tracking-[.325rem] 2xs:tracking-[.445rem] xs:tracking-[.69rem] sm:tracking-[1.02rem] 2xs:mb-2 xs:mb-4 scale-y-75">
             ŁUKASZ ŚLIWIŃSKI
           </span>
@@ -23,9 +23,9 @@ const Home = ({ verticalScreen, isMobile }: ISection) => {
             Z GÓRĄ W TLE
           </span>
         </h1>
-        <div className="grid xs:grid-cols-3 gap-2 xs:gap-6 sm:gap-8">
+        <div className="grid xs:grid-cols-3 gap-2 sm:gap-8">
           <Button label="O MNIE" href="#about" />
-          <Button label="MUZYKA" href="#music" />
+          <Button label="O MUZYCE" href="#music" />
           <Button label="LINKI" href="#links" />
         </div>
       </div>
