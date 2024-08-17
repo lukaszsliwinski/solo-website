@@ -9,7 +9,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: 'Z górą w tle',
-  description: '',
+  description: 'Łukasz Śliwiński - Z górą w tle - muzyka, góry, przestrzeń i improwizacja.',
   icons: [{ rel: 'icon', url: Favicon.src }]
 };
 
