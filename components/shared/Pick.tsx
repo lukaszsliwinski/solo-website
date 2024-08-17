@@ -9,9 +9,9 @@ const Pick = ({ label, href, hover, active, icon }: IPick) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <label className="hidden xs:block text-main-text lg:mb-1 text-[.45rem] lg:text-xs">
+      <span className="hidden xs:block text-main-text lg:mb-1 text-[.45rem] lg:text-xs">
         {label}
-      </label>
+      </span>
       <div className="mb-4 xs:max-lg:mb-2 scale-[.6] xs:scale-75 lg:scale-100">{icon}</div>
     </Link>
   );
