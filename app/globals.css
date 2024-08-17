@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --slope: 60%;
+  --slope-mobile: 30%;
 }
 
 /* scrollbar */
 html {
-  scrollbar-color: rgb(0 0 0) rgb(163 163 163);
+  scrollbar-color: #09090b #e5e5e5;
   scrollbar-width: thin;
 }
 
@@ -18,30 +18,39 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: rgb(0 0 0);
+  background: #09090b;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: rgb(0 0 0);
+  background: #09090b;
 }
 
 html::-webkit-scrollbar-track {
-  background: rgb(163 163 163);
+  background: #e5e5e5;
 }
 
-
 .left-cover {
-  clip-path: polygon(0 0,100% var(--slope),100% 100%,0 100%);
+  clip-path: polygon(0 0, 100% var(--slope), 100% 100%, 0 100%);
 }
 
 .right-cover {
-  clip-path: polygon(0 var(--slope),100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 var(--slope), 100% 0, 100% 100%, 0 100%);
 }
 
 .top-cover {
-  clip-path: polygon(0 0,100% 0,0 100%,0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
 }
 
 .bottom-cover {
-  clip-path: polygon(0 0,0 0,100% 100%,0 100%);
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
+}
+
+@media screen and (max-width: 1023px) {
+  .left-cover {
+    clip-path: polygon(0 0, 100% var(--slope-mobile), 100% 100%, 0 100%);
+  }
+
+  .right-cover {
+    clip-path: polygon(0 var(--slope-mobile), 100% 0, 100% 100%, 0 100%);
+  }
 }

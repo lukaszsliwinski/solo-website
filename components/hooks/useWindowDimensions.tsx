@@ -8,13 +8,13 @@ type WindowDimentions = {
 const useWindowDimensions = (): WindowDimentions => {
   const [windowDimensions, setWindowDimensions] = useState<WindowDimentions>({
     screenWidth: undefined,
-    screenHeight: undefined,
+    screenHeight: undefined
   });
   useEffect(() => {
     function handleResize(): void {
       setWindowDimensions({
         screenWidth: window.innerWidth,
-        screenHeight: window.innerHeight,
+        screenHeight: window.innerHeight
       });
     }
     handleResize();
