@@ -17,7 +17,7 @@ const About = () => {
       <Paragraph
         header={'O MNIE'}
         text={
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          'Przygodę z\xa0muzyką autorską zacząłem, gdy jako nastolatek rozpocząłem samodzielną naukę gry na gitarze i\xa0założyłem pierwszy zespół. Przez prawie 20 lat, w\xa0różnych składach, grałem muzykę głównie rockową, zahaczając nierzadko o\xa0jazz, blues, folk oraz muzykę świata. Nadszedł czas, abym pograł trochę sam ze sobą. Otwieram przed sobą nowy muzyczny rozdział, jakim jest autorski album solowy, zainspirowany improwizacją, ambientem i\xa0elektroniką. Oprócz gitary, mojego głównego instrumentu, eksperymentuję z\xa0syntezatorem i\xa0samplerem.'
         }
       />
     </section>

@@ -18,22 +18,22 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
   [
     {
       label: 'SOUNDCLOUD',
-      href: 'https://soundcloud.com',
+      href: 'https://soundcloud.com/lukasz_sliwinski/sets/z-gora-w-tle/',
       icon: faSoundcloud,
       hover: 'hover:text-orange-600',
       active: 'active:text-orange-600'
     },
-    {
-      label: 'BANDCAMP',
-      href: 'https://bandcamp.com',
-      icon: faBandcamp,
-      hover: 'hover:text-cyan-600',
-      active: 'active:text-cyan-600'
-    },
+    // {
+    //   label: 'BANDCAMP',
+    //   href: 'https://bandcamp.com',
+    //   icon: faBandcamp,
+    //   hover: 'hover:text-cyan-600',
+    //   active: 'active:text-cyan-600'
+    // },
     // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800', active: 'active:text-purple-800'},
     {
       label: 'YOUTUBE',
-      href: 'https://youtube.com',
+      href: 'https://www.youtube.com/@lukasz_sliwinski',
       icon: faYoutube,
       hover: 'hover:text-red-600',
       active: 'active:text-red-600'
@@ -56,7 +56,7 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
       className={`relative flex ${isMobile && !verticalScreen ? 'h-[60vh]' : 'h-[45vh]'} bg-light-bg`}
       id="links"
     >
-      <div className="grid grid-cols-3 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">{picks}</div>
+      <div className="grid grid-cols-2 gap-3 xs:gap-6 lg:gap-16 pb-20 m-auto">{picks}</div>
       <div className="absolute bottom-6 flex justify-center w-full select-none">
         <p className="text-gray-950 text-sm">&copy; {years} ŁUKASZ ŚLIWIŃSKI</p>
       </div>
