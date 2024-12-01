@@ -6,7 +6,7 @@ const Music = () => {
       className="relative bg-mountains top-0 min-h-screen bg-cover bg-fixed bg-center"
       id="music"
     >
-      <div className="absolute top-0 w-full h-28 bg-dark-bg top-cover"></div>
+      <div className="absolute top-0 w-full -mt-1 h-28 bg-dark-bg top-cover"></div>
 
       <div className="grid lg:grid-cols-2 min-h-screen bg-dark-bg/40 py-40 lg:py-0">
         <Paragraph
@@ -23,7 +23,7 @@ const Music = () => {
         ></iframe>
       </div>
 
-      <div className="absolute bottom-0 w-full h-28 bg-light-bg bottom-cover"></div>
+      <div className="absolute bottom-0 w-full -mb-1 h-28 bg-light-bg bottom-cover"></div>
     </section>
   );
 };

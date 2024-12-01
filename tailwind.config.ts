@@ -36,7 +36,7 @@ const config: Config = {
         'screen-mobile': 'calc(var(--vh, 1vh) * 100)'
       },
       colors: {
-        'main-text': '#fafafa',
+        'main-text': '#ffffff',
         'dark-text': '#404040',
         'dark-bg': '#09090b',
         'light-bg': '#e5e5e5'

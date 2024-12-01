@@ -30,8 +30,8 @@ const Home = ({ verticalScreen, isMobile }: ISection) => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 w-7/12 h-1/5 bg-dark-bg left-cover"></div>
-      <div className="absolute bottom-0 right-0 w-7/12 h-1/5 bg-dark-bg right-cover"></div>
+      <div className="absolute bottom-0 -mb-1 w-7/12 h-1/5 bg-dark-bg left-cover"></div>
+      <div className="absolute bottom-0 right-0 -mb-1 w-7/12 h-1/5 bg-dark-bg right-cover"></div>
     </section>
   );
 };

@@ -38,11 +38,11 @@ html::-webkit-scrollbar-track {
 }
 
 .top-cover {
-  clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 5%, 0 100%);
 }
 
 .bottom-cover {
-  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 95%, 100% 100%, 0 100%);
 }
 
 @media screen and (max-width: 1023px) {
