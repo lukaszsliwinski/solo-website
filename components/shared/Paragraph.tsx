@@ -1,3 +1,4 @@
+// Shared paragraph component
 const Paragraph = ({ header, text }: { header: string; text: string }) => {
   return (
     <div className="mx-6 sm:m-auto sm:w-4/5 max-w-160">

@@ -1,5 +1,6 @@
 import { IButton } from './types';
 
+// Shared button component
 const Button = ({ label, href }: IButton) => {
   return (
     <a

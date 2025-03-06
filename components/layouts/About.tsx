@@ -2,6 +2,7 @@ import Image from 'next/image';
 import profile from '../../public/profile2.png';
 import Paragraph from '../shared/Paragraph';
 
+// About me section component
 const About = () => {
   return (
     <section className="grid lg:grid-cols-2 min-h-screen" id="about">

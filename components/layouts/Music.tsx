@@ -1,5 +1,6 @@
 import Paragraph from '../shared/Paragraph';
 
+// Music section component with SoundCloud player
 const Music = () => {
   return (
     <section

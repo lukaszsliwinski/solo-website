@@ -3,6 +3,7 @@ import Image from 'next/image';
 import logo from '../../public/logo.svg';
 import Button from '../shared/Button';
 
+// Home page component
 const Home = ({ verticalScreen, isMobile }: ISection) => {
   return (
     <section className="relative bg-cover bg-center bg-no-repeat bg-landing" id="home">
