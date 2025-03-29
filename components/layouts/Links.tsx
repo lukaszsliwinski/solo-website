@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSoundcloud,
   faYoutube,
-  faBandcamp,
   faInstagram
 } from '@fortawesome/free-brands-svg-icons';
 import moment from 'moment';
@@ -23,13 +22,6 @@ const Links = ({ verticalScreen, isMobile }: ISection) => {
       hover: 'hover:text-orange-600',
       active: 'active:text-orange-600'
     },
-    // {
-    //   label: 'BANDCAMP',
-    //   href: 'https://bandcamp.com',
-    //   icon: faBandcamp,
-    //   hover: 'hover:text-cyan-600',
-    //   active: 'active:text-cyan-600'
-    // },
     // { label: 'INSTAGRAM', href: 'https://instagram.com', icon: faInstagram, hover: 'hover:text-purple-800', active: 'active:text-purple-800'},
     {
       label: 'YOUTUBE',

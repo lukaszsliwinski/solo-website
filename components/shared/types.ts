@@ -1,3 +1,4 @@
+// Shared types for components
 import { ReactNode } from 'react';
 
 export interface ISection {

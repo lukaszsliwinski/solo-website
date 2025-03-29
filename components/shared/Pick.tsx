@@ -1,6 +1,7 @@
 import { IPick } from './types';
 import Link from 'next/link';
 
+// Pick with link component
 const Pick = ({ label, href, hover, active, icon }: IPick) => {
   return (
     <Link
