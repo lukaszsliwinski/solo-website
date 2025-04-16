@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import profile from '../../public/profile2.png';
+import profile from '../../public/profile.png';
 import Paragraph from '../shared/Paragraph';
 
 // About me section component
