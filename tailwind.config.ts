@@ -15,8 +15,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        landing: "url('../public/landing.png')",
-        mountains: "url('../public/mountains.jpg')",
+        landing: "url('../public/landing.webp')",
+        mountains: "url('../public/mountains.webp')",
         pick: "url('../public/pick.svg')"
       },
       backgroundSize: {
