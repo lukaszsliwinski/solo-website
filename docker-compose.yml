@@ -1,0 +1,24 @@
+services:
+  solo_website:
+    build: .
+    container_name: solo_website
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.solo_website.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"
+      - "traefik.http.routers.solo_website.entrypoints=websecure"
+      - "traefik.http.routers.solo_website.tls.certresolver=le"
+      - "traefik.http.services.solo_website.loadbalancer.server.port=${PORT}"
+    networks:
+      - web
+    expose:
+      - "${PORT}"
+
+networks:
+  web:
+    external: true
