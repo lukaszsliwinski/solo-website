@@ -7,11 +7,17 @@ WORKDIR /app
 # Copy only package.json and package-lock.json first for caching
 COPY package*.json ./
 
-# Install only production dependencies
-RUN npm install --production
+# Install all dependencies (prod + dev)
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
+
+# Build the application
+RUN npm run build
+
+# Remove devDependencies, keep only production
+RUN npm prune --production
 
 # Expose port 3000 (or the one your app uses)
 EXPOSE 3000
