@@ -1,0 +1,11 @@
+node_modules/
+.next/
+next-env.d.ts
+.env*
+.git/
+npm-debug.log*
+docs/
+README.md
+AGENTS.md
+CLAUDE.md
+docker-compose.yml
