@@ -77,7 +77,7 @@ function Block({ photo, photoPos, photoClass, text }: BlockProps) {
 
 export default function Bio() {
   return (
-    <section className="min-h-screen py-16 text-theme-darker max-w-lg  md:max-w-2xl lg:max-w-4xl" id="bio">
+    <section className="min-h-screen pb-16 text-theme-darker max-w-lg md:max-w-2xl lg:max-w-4xl" id="bio">
       <SectionHeader variant="dark" icon="/icons/bio_icon.svg" text="O MNIE" iconClassName="size-23" />
       <div className="mt-10 md:mt-20">
         {BIO.map((item, idx) => (

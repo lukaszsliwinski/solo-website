@@ -9,7 +9,7 @@ export default function Landing() {
   return (
     <section className="h-screen" id="landing">
       <motion.div
-        className="flex justify-center items-center w-screen h-[90vh] bg-[url('/images/landing_mobile.webp')] sm:bg-[url('/images/landing.webp')] max-sm:bg-center bg-cover bg-no-repeat bg-fixed elliptical-bottom"
+        className="flex justify-center items-center w-screen h-[80vh] sm:h-[90vh] bg-[url('/images/landing_mobile.webp')] sm:bg-[url('/images/landing.webp')]  max-sm:bg-top bg-cover bg-no-repeat bg-scroll xl:bg-fixed elliptical-bottom"
         initial={{ filter: "brightness(0)" }}
         animate={{ filter: "brightness(1)" }}
         transition={{

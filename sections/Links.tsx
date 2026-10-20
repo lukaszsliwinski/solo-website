@@ -65,16 +65,16 @@ export default function Links() {
 
   return (
     <section
-      className="flex flex-col h-screen"
+      className="flex flex-col h-[80vh]"
       id="links"
     >
-      <div className="flex justify-center items-center h-1/2">
+      <div className="flex justify-center items-center h-2/5">
         <SectionHeader variant="dark" icon="/icons/links_icon.svg" text="LINKI" iconClassName="size-20"
         />
       </div>
 
       <footer
-        className="relative w-screen flex justify-center h-3/4 sm:h-2/3 bg-[url('/images/footer.webp')] bg-cover bg-center bg-no-repeat bg-fixed elliptical-top"
+        className="relative w-screen flex justify-center h-3/5 bg-[url('/images/footer.webp')] bg-cover bg-center bg-no-repeat bg-scroll elliptical-top"
       >
         <div className="flex justify-center items-center h-full bg-theme-dark/92 w-full backdrop-blur-[1px]">
           <motion.div
