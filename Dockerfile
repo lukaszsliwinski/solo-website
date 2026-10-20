@@ -1,26 +1,35 @@
-# Use official Node.js LTS (Alpine) as the base image
-FROM node:20-alpine
-
-# Set working directory inside the container
+# Install dependencies in a separate stage for layer caching.
+FROM node:24-alpine AS deps
 WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# Copy only package.json and package-lock.json first for caching
-COPY package*.json ./
-
-# Install all dependencies (prod + dev)
-RUN npm install
-
-# Copy the rest of the application code
+# Build the standalone Next.js server.
+FROM node:24-alpine AS builder
+WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build the application
 RUN npm run build
 
-# Remove devDependencies, keep only production
-RUN npm prune --production
+# Keep only runtime files in the production image.
+FROM node:24-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    PORT=3000 \
+    HOSTNAME=0.0.0.0
 
-# Expose port 3000 (or the one your app uses)
+RUN addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 --ingroup nodejs nextjs
+
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Allow Next.js to write its runtime cache as the non-root user.
+RUN mkdir -p .next/cache && chown nextjs:nodejs .next/cache
+
+USER nextjs
 EXPOSE 3000
-
-# Define the command to run the app
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

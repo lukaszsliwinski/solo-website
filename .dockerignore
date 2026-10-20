@@ -3,6 +3,11 @@ node_modules/
 next-env.d.ts
 .env*
 .git/
+.codex/
+.agents/
+.aws/
+*.tsbuildinfo
+logs/
 npm-debug.log*
 docs/
 README.md

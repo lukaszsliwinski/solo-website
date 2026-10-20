@@ -1,28 +1,45 @@
-'use client';
-import { useState, useEffect } from 'react';
-import useWindowDimensions from '../components/hooks/useWindowDimensions';
-import Home from '@/components/layouts/Home';
-import About from '@/components/layouts/About';
-import Music from '@/components/layouts/Music';
-import Links from '@/components/layouts/Links';
+"use client";
 
-export default function Page() {
-  const { screenHeight, screenWidth } = useWindowDimensions();
+import { useState, useEffect, useRef } from "react";
 
-  const [verticalScreen, setVerticalScreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(screenWidth ? screenWidth < 1024 : false);
+import NavBar from "@/components/NavBar";
+import Landing from "@/sections/Landing";
+import Bio from "@/sections/Bio";
+import Music from "@/sections/Music";
+import Links from "@/sections/Links";
+
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
+// https://pixelarity.com/hyperbolic
+export default function Home() {
+  const landingRef = useRef<HTMLDivElement>(null);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
-    setVerticalScreen(screenHeight && screenWidth ? screenHeight > screenWidth : true);
-    setIsMobile(screenWidth ? screenWidth < 1024 : false);
-  }, [screenHeight, screenWidth]);
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowNavbar(!entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (landingRef.current) {
+      observer.observe(landingRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <>
-      <Home verticalScreen={verticalScreen} isMobile={isMobile} />
-      <About />
+    <main className="w-screen flex flex-col flex-1 items-center justify-center text-theme-light paper">
+      <NavBar visible={showNavbar} />
+      
+      <div ref={landingRef}>
+        <Landing />
+      </div>
+
+      <Bio />
       <Music />
-      <Links verticalScreen={verticalScreen} isMobile={isMobile} />
-    </>
+      <Links />
+    </main>
   );
 }
