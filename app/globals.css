@@ -1,56 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --slope: 60%;
-  --slope-mobile: 30%;
+  --light: #f8f7f0;
+  --dark: #2e2e2e;
+  --darker: #1d1d1d;
+  --main: #5a8d83;
+  --paper: #eee2be;
+
+  --spotify: #1ed760;
+  --apple: #fb3751;
+  --soundcloud: #fd6d00;
+  --youtube: #ff0033;
+  --instagram: #f82291;
+  --facebook: #0766ff;
 }
 
-/* scrollbar */
-html {
-  scrollbar-color: #09090b #e5e5e5;
-  scrollbar-width: thin;
+@theme inline {
+  --color-theme-light: var(--light);
+  --color-theme-dark: var(--dark);
+  --color-theme-darker: var(--darker);
+  --color-theme-main: var(--main);
+
+  --color-brand-spotify: var(--spotify);
+  --color-brand-apple: var(--apple);
+  --color-brand-soundcloud: var(--soundcloud);
+  --color-brand-youtube: var(--youtube);
+  --color-brand-instagram: var(--instagram);
+  --color-brand-facebook: var(--facebook);
+
+  --font-sans: var(--font-source-sans);
 }
 
-html::-webkit-scrollbar {
-  width: 8px;
+@layer base {
+  a:hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }
 
-html::-webkit-scrollbar-thumb {
-  background: #09090b;
+body {
+  font-family: var(--font-source-sans), sans-serif;
+  overflow-x: hidden;
 }
 
-html::-webkit-scrollbar-thumb:hover {
-  background: #09090b;
+.elliptical-bottom {
+  clip-path: ellipse(140% 100% at 50% 0%);
 }
 
-html::-webkit-scrollbar-track {
-  background: #e5e5e5;
+.elliptical-top {
+  clip-path: ellipse(140% 100% at 50% 100%);
 }
 
-.left-cover {
-  clip-path: polygon(0 0, 100% var(--slope), 100% 100%, 0 100%);
-}
-
-.right-cover {
-  clip-path: polygon(0 var(--slope), 100% 0, 100% 100%, 0 100%);
-}
-
-.top-cover {
-  clip-path: polygon(0 0, 100% 0, 100% 5%, 0 100%);
-}
-
-.bottom-cover {
-  clip-path: polygon(0 0, 100% 95%, 100% 100%, 0 100%);
-}
-
-@media screen and (max-width: 1023px) {
-  .left-cover {
-    clip-path: polygon(0 0, 100% var(--slope-mobile), 100% 100%, 0 100%);
+@media (min-width: theme(--breakpoint-sm)) {
+  .elliptical-bottom {
+    clip-path: ellipse(100% 100% at 50% 0%);
   }
 
-  .right-cover {
-    clip-path: polygon(0 var(--slope-mobile), 100% 0, 100% 100%, 0 100%);
+  .elliptical-top {
+    clip-path: ellipse(100% 100% at 50% 100%);
   }
+}
+
+@media (min-width: theme(--breakpoint-lg)) {
+  .elliptical-bottom {
+    clip-path: ellipse(85% 100% at 50% 0%);
+  }
+
+  .elliptical-top {
+    clip-path: ellipse(85% 100% at 50% 100%);
+  }
+}
+
+.paper {
+  background-color: var(--light);
+  background-image:
+    url("/images/paper.webp"),
+    linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--light), transparent),
+      var(--paper) 1000% /* im mniejsza wartość tym starszy papier */
+    );
+}
+
+.gradient {
+  background-color: var(--main);
+  background-image:
+    linear-gradient(
+      30deg,
+      color-mix(in srgb, var(--dark), transparent),
+      var(--main) 80%
+    );
 }

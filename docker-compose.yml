@@ -6,14 +6,16 @@ services:
     env_file:
       - .env
     environment:
-      - NODE_ENV=${NODE_ENV}
-      - PORT=${PORT}
+      NODE_ENV: production
+      PORT: ${PORT:-3000}
+      HOSTNAME: 0.0.0.0
+      NEXT_TELEMETRY_DISABLED: "1"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.solo_website.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"
       - "traefik.http.routers.solo_website.entrypoints=websecure"
       - "traefik.http.routers.solo_website.tls.certresolver=le"
-      - "traefik.http.services.solo_website.loadbalancer.server.port=${PORT}"
+      - "traefik.http.services.solo_website.loadbalancer.server.port=${PORT:-3000}"
       - "traefik.http.middlewares.solo_website-hsts.headers.stsSeconds=31536000"
       - "traefik.http.middlewares.solo_website-hsts.headers.stsIncludeSubdomains=true"
       - "traefik.http.middlewares.solo_website-hsts.headers.stsPreload=true"
@@ -21,7 +23,7 @@ services:
     networks:
       - web
     expose:
-      - "${PORT}"
+      - "${PORT:-3000}"
 
 networks:
   web:
