@@ -2,7 +2,7 @@
 
 **[www.lukaszsliwinski.pl](https://www.lukaszsliwinski.pl)**
 
-![Website landing section](screen.png)
+![Screenshot of the website landing section](app/opengraph-image.png)
 
 ## About the project
 

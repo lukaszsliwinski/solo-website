@@ -12,8 +12,15 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.lukaszsliwinski.pl"),
   title: "Łukasz Śliwiński | Muzyka",
   description: DESCRIPTION,
+  openGraph: {
+    url: "/",
+    siteName: "Łukasz Śliwiński",
+    locale: "pl_PL",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
