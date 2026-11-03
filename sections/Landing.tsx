@@ -40,7 +40,7 @@ export default function Landing() {
             }}
           >
             <h1 className="text-3xl sm:text-4xl mt-8">ŁUKASZ ŚLIWIŃSKI</h1>
-            <h2 className="text-[13px] sm:text-sm sm:leading-7 mb-8 px-2">{DESCRIPTION}</h2>
+            <p className="text-[13px] sm:text-sm sm:leading-7 mb-8 px-2">{DESCRIPTION}</p>
           </motion.hgroup>
           <div className="flex gap-4 mb-8">
             {MENU_ITEMS.map((item) => (

@@ -80,12 +80,12 @@ function Album({ cover, coverAlt, title, year, text, src, playerTitle, links }: 
             />
           </div>
           <hgroup className="max-md:text-center font-normal tracking-[.15rem]">
-            <h4 className="text-3xl mb-1">{title}</h4>
-            <h5 className="text-lg">{year}</h5>
+            <h3 className="text-3xl mb-1">{title}</h3>
+            <p className="text-lg">{year}</p>
           </hgroup>
         </div>
         <p className="max-md:max-w-lg max-md:mx-auto max-sm:px-4 max-md:px-10 mt-4 text-justify">{text}</p>
-        <h6 className="mt-4 text-center font-semibold tracking-[.15rem]">posłuchaj:</h6>
+        <p className="mt-4 text-center font-semibold tracking-[.15rem]">posłuchaj:</p>
         <div className="flex gap-5 justify-center mt-2 max-md:mb-8">
           {links.map((link) => (
             <Link
