@@ -1,13 +1,34 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import SvgIcon from "./SvgIcon";
 import { cn } from "@/lib/utils";
 import { MENU_ITEMS } from "@/lib/constants";
 
-type NavbarProps = {
-  visible: boolean;
-};
+// No runtime FontAwesome CSS - icon sizes come from Tailwind classes.
+// Lives in a client module, because this setting has to apply in the browser.
+config.autoAddCss = false;
 
-export default function NavBar({ visible }: NavbarProps) {
+export default function NavBar() {
+  const [visible, setVisible] = useState(false);
+
+  // Landing has its own menu, so the navbar appears only once it is almost out of view.
+  useEffect(() => {
+    const landing = document.getElementById("landing");
+    if (!landing) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    observer.observe(landing);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
       className={cn(
