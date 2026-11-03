@@ -36,6 +36,7 @@ function GuitarPick({ label, href, icon, hoverColor }: GuitarPickProps) {
 
   return (
     <motion.div variants={pickAppearance}>
+      {/* Pick shape comes from border-radius alone; rotate-45 points the tip down, rotate-315 offsets it for the content. */}
       <Link
         href={href}
         className={cn("flex justify-center items-center size-22 border border-white rounded-tl-[60%] rounded-tr-[50%_100%] rounded-br-[7px] rounded-bl-[100%_50%] rotate-45 hover:text-inherit", hoverColor)}

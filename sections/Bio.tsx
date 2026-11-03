@@ -10,12 +10,13 @@ import { faThumbTack } from "@fortawesome/free-solid-svg-icons";
 
 type BlockProps = {
   photo: string;
+  photoAlt: string;
   photoPos: 'left' | 'right';
   photoClass?: string;
   text: string;
 }
 
-function Block({ photo, photoPos, photoClass, text }: BlockProps) {
+function Block({ photo, photoAlt, photoPos, photoClass, text }: BlockProps) {
   const photoFadeUp = {
     hidden: {
       opacity: 0,
@@ -69,7 +70,7 @@ function Block({ photo, photoPos, photoClass, text }: BlockProps) {
         }}
       >
         <FontAwesomeIcon icon={faThumbTack} className="absolute -top-2.5 left-[45%] -rotate-20 size-4" />
-        <Polaroid photo={photo} photoClass={photoClass} />
+        <Polaroid photo={photo} photoAlt={photoAlt} photoClass={photoClass} />
       </motion.div>
     </div>
   );
@@ -85,6 +86,7 @@ export default function Bio() {
             key={idx}
             text={item.text}
             photo={item.photo}
+            photoAlt={item.photoAlt}
             photoPos={idx % 2 !== 0 ? 'right' : 'left'}
             photoClass={item.photoClass}
           />

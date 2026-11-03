@@ -7,6 +7,8 @@ type SvgIconProps = {
   className: string,
 }
 
+// Inlined because an SVG in <img> cannot inherit `currentColor` or Tailwind classes.
+// Sources are limited to files from public/.
 export default function SvgIcon({ src, className }: SvgIconProps) {
   const [svgContent, setSvgContent] = useState<string | null>(null);
 

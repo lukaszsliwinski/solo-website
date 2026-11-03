@@ -38,7 +38,7 @@ export default function SectionHeader({ variant, icon, text, iconClassName }: Se
         }}
     >
       <SvgIcon src={icon} className={cn("mb-4", iconClassName)}/>
-      <h3 className="text-[32px] text-center tracking-[.3rem]">{text}</h3>
+      <h2 className="text-[32px] text-center tracking-[.3rem]">{text}</h2>
       <div className="h-0.75 w-8 mt-3 rounded-full gradient"></div>
     </motion.div>
   );

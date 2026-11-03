@@ -8,6 +8,7 @@ function easeInOutCubic(t: number) {
     : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
+// Smooth anchor scrolling - native `scroll-behavior: smooth` offers no control over duration or easing.
 export default function AnchorScroll() {
   const animationRef = useRef<number | null>(null);
 
@@ -16,6 +17,7 @@ export default function AnchorScroll() {
       element: Element,
       duration = 1000
     ) => {
+      // A new click interrupts the running animation.
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
@@ -23,6 +25,12 @@ export default function AnchorScroll() {
       const startY = window.scrollY;
       const targetY =
         element.getBoundingClientRect().top + window.scrollY;
+
+      // Respect the system "reduce motion" setting - jump straight to the target.
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.scrollTo(0, targetY);
+        return;
+      }
 
       const distance = targetY - startY;
       const startTime = performance.now();
@@ -66,6 +74,7 @@ export default function AnchorScroll() {
       scrollToElement(target);
     };
 
+    // Capture phase: preventDefault() must run before next/link handles the click.
     document.addEventListener("click", handleClick, true);
 
     return () => {

@@ -11,10 +11,12 @@ import { ALBUMS } from "@/lib/constants";
 
 type AlbumProps = {
   cover: string,
+  coverAlt: string,
   title: string,
   year: string,
   text: string,
   src: string,
+  playerTitle: string,
   links: {
     name: string,
     href: string,
@@ -23,7 +25,7 @@ type AlbumProps = {
   }[],
 }
 
-function Album({ cover, title, year, text, src, links }: AlbumProps) {
+function Album({ cover, coverAlt, title, year, text, src, playerTitle, links }: AlbumProps) {
   const fadeUp = {
     hidden: {
       opacity: 0,
@@ -54,6 +56,7 @@ function Album({ cover, title, year, text, src, links }: AlbumProps) {
           className="w-76 sm:w-84 h-120 shadow-lg"
           allow="autoplay"
           src={src}
+          title={playerTitle}
         >
         </iframe>
       </motion.div>
@@ -72,17 +75,17 @@ function Album({ cover, title, year, text, src, links }: AlbumProps) {
               src={cover}
               width={180}
               height={180}
-              alt="cover"
+              alt={coverAlt}
               className="shadow-lg"
             />
           </div>
           <hgroup className="max-md:text-center font-normal tracking-[.15rem]">
-            <h4 className="text-3xl mb-1">{title}</h4>
-            <h5 className="text-lg">{year}</h5>
+            <h3 className="text-3xl mb-1">{title}</h3>
+            <p className="text-lg">{year}</p>
           </hgroup>
         </div>
         <p className="max-md:max-w-lg max-md:mx-auto max-sm:px-4 max-md:px-10 mt-4 text-justify">{text}</p>
-        <h6 className="mt-4 text-center font-semibold tracking-[.15rem]">posłuchaj:</h6>
+        <p className="mt-4 text-center font-semibold tracking-[.15rem]">posłuchaj:</p>
         <div className="flex gap-5 justify-center mt-2 max-md:mb-8">
           {links.map((link) => (
             <Link
@@ -111,10 +114,12 @@ export default function Music() {
           <Album
             key={album.title}
             cover={album.cover}
+            coverAlt={album.coverAlt}
             year={album.year}
             title={album.title}
             text={album.text}
             src={album.src}
+            playerTitle={album.playerTitle}
             links={album.links}
           />
         ))}

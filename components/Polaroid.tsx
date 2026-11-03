@@ -2,17 +2,18 @@ import Image from "next/image";
 
 type PolaroidProps = {
   photo: string;
+  photoAlt: string;
   photoClass?: string;
 }
 
-export default function Polaroid({ photo, photoClass }: PolaroidProps) {
+export default function Polaroid({ photo, photoAlt, photoClass }: PolaroidProps) {
   return (
     <div className="p-3 pb-12 bg-white shadow">
       <Image
         src={photo}
         width={240}
         height={240}
-        alt="photo"
+        alt={photoAlt}
         className={photoClass}
       />
     </div>

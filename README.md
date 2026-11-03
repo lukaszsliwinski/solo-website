@@ -1,49 +1,25 @@
-# Personal Music Website
+# Łukasz Śliwiński – Music Website
 
-## Preview
+**[www.lukaszsliwinski.pl](https://www.lukaszsliwinski.pl)**
 
-**[www.lukaszsliwinski.pl](http://www.lukaszsliwinski.pl)**
+![Screenshot of the website landing section](app/opengraph-image.png)
 
-## About project
+## About the project
 
-Personal website of my music solo project. It's a lightweight, SSR application written in Next.js.
+The official website of my solo music project, built entirely by me from start to finish: from concept, through implementation and content, to production deployment. The interface was created without UI component libraries: the guitar pick-shaped links are built in pure CSS, and scrolling between sections uses a custom animation. The main content is kept separate from the components and gathered in a single file, which makes it easy to edit. The site is responsive and, among other things, uses a separate background image on mobile devices.
 
-## Features:
+## Technologies
 
-- server side rendering
-- integration with SoundCloud API
+**Frontend**
 
-## Technologies used
+- **Next.js 16 (App Router)** – static prerendering, plus image and font optimization
+- **React 19 and TypeScript** – typed components and data
+- **Tailwind CSS 4** – styling and responsiveness, with a theme based on CSS variables
+- **Motion** – intro animation and animated elements that appear on scroll
+- **Inline SVG and Font Awesome** – icons that inherit theme colors, and music service icons
+- **SoundCloud Widget** – player embedded in the music section
 
-- TypeScript
-- Next.js
-- Tailwind CSS
+**Deployment**
 
-## Docker deployment
-
-The Docker image uses Node.js 24 Alpine and a multi-stage Next.js standalone
-build. The production container runs as a non-root user and listens on
-`0.0.0.0:3000` by default.
-
-Create a local `.env` file with the deployment settings:
-
-```dotenv
-DOMAIN=example.com
-PORT=3000
-```
-
-Compose sets `NODE_ENV=production` and disables Next.js telemetry. `PORT` is
-optional and defaults to `3000`; the application and Traefik use the same value.
-The deployment expects Traefik on the existing external Docker network `web`,
-with the `websecure` entrypoint and `le` certificate resolver configured.
-
-Build and start the application:
-
-```sh
-docker compose up -d --build
-docker compose logs -f solo_website
-```
-
-The `.env` file is excluded from the build context and supplied at runtime by
-Compose. Variables needed during `next build`, including any future
-`NEXT_PUBLIC_*` variables, must be supplied separately at build time.
+- **Docker** – multi-stage build, Next.js standalone mode, container running without root privileges
+- **Traefik** – reverse proxy with domain routing, TLS certificate and HSTS header
