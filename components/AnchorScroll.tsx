@@ -26,6 +26,12 @@ export default function AnchorScroll() {
       const targetY =
         element.getBoundingClientRect().top + window.scrollY;
 
+      // Respect the system "reduce motion" setting - jump straight to the target.
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.scrollTo(0, targetY);
+        return;
+      }
+
       const distance = targetY - startY;
       const startTime = performance.now();
 
