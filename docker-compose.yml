@@ -10,6 +10,7 @@ services:
       PORT: ${PORT:-3000}
       HOSTNAME: 0.0.0.0
       NEXT_TELEMETRY_DISABLED: "1"
+    # Traefik: domain routing, TLS certificate and HSTS header.
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.solo_website.rule=Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`)"

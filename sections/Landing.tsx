@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import SvgIcon from "@/components/SvgIcon";
-import { TITLE, MENU_ITEMS } from '@/lib/constants';
+import { DESCRIPTION, MENU_ITEMS } from '@/lib/constants';
 
 export default function Landing() {
   return (
     <section className="h-screen" id="landing">
+      {/* The filter affects the whole subtree, so background and content fade in from black together. */}
       <motion.div
         className="flex justify-center items-center w-screen h-[80vh] sm:h-[90vh] bg-[url('/images/landing_mobile.webp')] sm:bg-[url('/images/landing.webp')]  max-sm:bg-top bg-cover bg-no-repeat bg-scroll xl:bg-fixed elliptical-bottom"
         initial={{ filter: "brightness(0)" }}
@@ -39,7 +40,7 @@ export default function Landing() {
             }}
           >
             <h1 className="text-3xl sm:text-4xl mt-8">ŁUKASZ ŚLIWIŃSKI</h1>
-            <h2 className="text-[13px] sm:text-sm sm:leading-7 mb-8 px-2">{TITLE}</h2>
+            <h2 className="text-[13px] sm:text-sm sm:leading-7 mb-8 px-2">{DESCRIPTION}</h2>
           </motion.hgroup>
           <div className="flex gap-4 mb-8">
             {MENU_ITEMS.map((item) => (

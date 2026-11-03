@@ -9,13 +9,15 @@ import Music from "@/sections/Music";
 import Links from "@/sections/Links";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
+// No runtime FontAwesome CSS - icon sizes come from Tailwind classes.
 config.autoAddCss = false;
 
-// https://pixelarity.com/hyperbolic
+
 export default function Home() {
   const landingRef = useRef<HTMLDivElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
 
+  // Landing has its own menu, so the navbar appears only once it is almost out of view.
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setShowNavbar(!entry.isIntersecting),

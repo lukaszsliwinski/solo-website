@@ -11,10 +11,12 @@ import { ALBUMS } from "@/lib/constants";
 
 type AlbumProps = {
   cover: string,
+  coverAlt: string,
   title: string,
   year: string,
   text: string,
   src: string,
+  playerTitle: string,
   links: {
     name: string,
     href: string,
@@ -23,7 +25,7 @@ type AlbumProps = {
   }[],
 }
 
-function Album({ cover, title, year, text, src, links }: AlbumProps) {
+function Album({ cover, coverAlt, title, year, text, src, playerTitle, links }: AlbumProps) {
   const fadeUp = {
     hidden: {
       opacity: 0,
@@ -54,6 +56,7 @@ function Album({ cover, title, year, text, src, links }: AlbumProps) {
           className="w-76 sm:w-84 h-120 shadow-lg"
           allow="autoplay"
           src={src}
+          title={playerTitle}
         >
         </iframe>
       </motion.div>
@@ -72,7 +75,7 @@ function Album({ cover, title, year, text, src, links }: AlbumProps) {
               src={cover}
               width={180}
               height={180}
-              alt="cover"
+              alt={coverAlt}
               className="shadow-lg"
             />
           </div>
@@ -111,10 +114,12 @@ export default function Music() {
           <Album
             key={album.title}
             cover={album.cover}
+            coverAlt={album.coverAlt}
             year={album.year}
             title={album.title}
             text={album.text}
             src={album.src}
+            playerTitle={album.playerTitle}
             links={album.links}
           />
         ))}

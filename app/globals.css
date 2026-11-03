@@ -42,6 +42,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Curved section edge; a wider ellipse on narrower screens keeps the curve gentle. */
 .elliptical-bottom {
   clip-path: ellipse(140% 100% at 50% 0%);
 }
@@ -77,7 +78,7 @@ body {
     linear-gradient(
       45deg,
       color-mix(in srgb, var(--light), transparent),
-      var(--paper) 1000% /* im mniejsza wartość tym starszy papier */
+      var(--paper) 1000% /* the lower the value, the older the paper looks */
     );
 }
 
